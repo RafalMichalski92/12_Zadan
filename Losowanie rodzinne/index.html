@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowanie Par</title>
+
+    <style>
+
+footer {
+background-color: #333;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://www.tapeciarnia.pl/tapety/normalne/tapeta-dekoracja-swiateczna-na-ciemnym-tle.jpg'); /* Dodaj link do świątecznego tła */
+            background-size: cover;
+            background-position: center;
+        }
+        #container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+        #pairs {
+            margin-top: 20px;
+        }
+        .pair {
+            margin: 10px 0;
+            font-size: 1.2em;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #addMember {
+            margin-top: 0px;
+        }
+        #drawButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        #memberList {
+            position: left;
+            top: 0px;
+            right: 0px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Losowanie Par</h1>
+        <input type="text" id="newMember" placeholder="Dodaj osobę">
+        <button id="addMember">Dodaj</button>
+     <br>   <button id="drawButton" onclick="drawPairs()">Losuj Pary</button>
+        <div id="pairs"></div>
+        <div id="memberList">
+            <h3>Lista osób do losowania:</h3>
+            <ul id="members"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+<footer>
+<p>Made By<br>Rafał <br>Michalski</p>
+<a href=”polityka-prywatnosci.html” style=”color: white;”>
+</footer>
+</body>
+</html>
